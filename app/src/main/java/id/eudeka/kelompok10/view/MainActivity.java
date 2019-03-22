@@ -1,7 +1,8 @@
-package id.eudeka.kelompok10;
+package id.eudeka.kelompok10.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import id.eudeka.kelompok10.R;
 
 public class MainActivity extends AppCompatActivity {
 
