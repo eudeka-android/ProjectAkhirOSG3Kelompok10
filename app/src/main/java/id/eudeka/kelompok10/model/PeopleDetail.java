@@ -95,4 +95,21 @@ public class PeopleDetail {
         return starships;
     }
 
+    public PeopleDetail(String name, String height, String mass, String hair_color, String skin_color,
+                        String eye_color, String birth_year, String gender, String homeworld,
+                        String[] films, String[] species, String[] vehicles, String starships) {
+        this.name = name;
+        this.height = height;
+        this.mass = mass;
+        this.hair_color = hair_color;
+        this.skin_color = skin_color;
+        this.eye_color = eye_color;
+        this.birth_year = birth_year;
+        this.gender = gender;
+        this.homeworld = homeworld;
+        this.films = films;
+        this.species = species;
+        this.vehicles = vehicles;
+        this.starships = starships;
+    }
 }
