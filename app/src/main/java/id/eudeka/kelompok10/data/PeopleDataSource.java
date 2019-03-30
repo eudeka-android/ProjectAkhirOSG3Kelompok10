@@ -1,4 +1,14 @@
 package id.eudeka.kelompok10.data;
 
-public class PeopleDataSource {
+import id.eudeka.kelompok10.model.People;
+
+public interface PeopleDataSource {
+
+    void getAllPeople(GetPeopleCallback callback);
+
+
+    interface GetPeopleCallback {
+        void onPeopleLoaded(People data);
+        void onDataNotAvailable(String errorMessage);
+    }
 }
