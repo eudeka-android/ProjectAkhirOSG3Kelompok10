@@ -120,9 +120,10 @@ public class PeopleDetail {
         return starships;
     }
 
-    public PeopleDetail(String name, String height, String mass, String hair_color, String skin_color,
+    public PeopleDetail(int mId, String name, String height, String mass, String hair_color, String skin_color,
                         String eye_color, String birth_year, String gender, String homeworld,
                         String[] films, String[] species, String[] vehicles, String starships) {
+        this.mId = mId;
         this.name = name;
         this.height = height;
         this.mass = mass;
