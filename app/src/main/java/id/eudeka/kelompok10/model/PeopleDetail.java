@@ -1,47 +1,72 @@
 package id.eudeka.kelompok10.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
+@Entity(tableName = "people")
 public class PeopleDetail {
 
+    @PrimaryKey(autoGenerate = true)
+    public int mId;
+
+    @ColumnInfo(name = "people_name")
     @SerializedName("name")
     private String name;
 
+    @ColumnInfo(name = "people_logo")
     @SerializedName("height")
     private String height;
 
+    @ColumnInfo(name = "people_mass")
     @SerializedName("mass")
     private String mass;
 
+    @ColumnInfo(name = "people_haircolor")
     @SerializedName("hair_color")
     private String hair_color;
 
+    @ColumnInfo(name = "people_skincolor")
     @SerializedName("skin_color")
     private String skin_color;
 
+    @ColumnInfo(name = "people_eyecolor")
     @SerializedName("eye_color")
     private String eye_color;
 
+    @ColumnInfo(name = "people_birthyear")
     @SerializedName("birth_year")
     private String birth_year;
 
+    @ColumnInfo(name = "people_gender")
     @SerializedName("gender")
     private String gender;
 
+    @ColumnInfo(name = "people_homeworld")
     @SerializedName("homeworld")
     private String homeworld;
 
+    @ColumnInfo(name = "people_films")
     @SerializedName("films")
     private String[] films;
 
+    @ColumnInfo(name = "people_species")
     @SerializedName("species")
     private String[] species;
 
+    @ColumnInfo(name = "people_vehicles")
     @SerializedName("vehicles")
     private String[] vehicles;
 
+    @ColumnInfo(name = "people_starships")
     @SerializedName("starships")
     private String starships;
+
+    public int getmId(){
+        return mId;
+    }
 
     public String getName() {
         return name;
