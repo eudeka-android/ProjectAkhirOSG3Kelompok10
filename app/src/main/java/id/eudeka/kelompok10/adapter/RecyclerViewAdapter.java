@@ -34,9 +34,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
         PeopleDetail data = list.get(i);
-        viewHolder.name.setText(data.getName());
-        viewHolder.height.setText(data.getHeight());
-        viewHolder.mass.setText(data.getMass());
+        viewHolder.name.setText("Name : "+data.getName());
+        viewHolder.height.setText("Height : "+data.getHeight());
+        viewHolder.mass.setText("Mass : "+data.getMass());
     }
 
     @Override
