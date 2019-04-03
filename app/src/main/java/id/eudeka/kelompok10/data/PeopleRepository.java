@@ -19,7 +19,7 @@ public class PeopleRepository implements PeopleDataSource{
         peopleRemoteDataSource.getAllPeople(new GetPeopleCallback() {
             @Override
             public void onPeopleLoaded(People data) {
-                peopleLocalDataSource.saveDataPeople(data.getPeoples());
+                peopleLocalDataSource.saveDataPeople(data.getResults());
                 callback.onPeopleLoaded(data);
             }
 
