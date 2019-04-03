@@ -1,16 +1,34 @@
 package id.eudeka.kelompok10.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class People implements Parcelable {
+public class People{
 
     @SerializedName("results")
+    private List<PeopleDetail> results = null;
+
+    public People(List<PeopleDetail> results) {
+        this.results = results;
+    }
+
+
+
+    public List<PeopleDetail> getResults() {
+        return results;
+    }
+
+    public void setResults(List<PeopleDetail> results) {
+        this.results = results;
+    }
+
+}
+
+
+//  Kodingan dari nurmansyah dengan parcelable
+   /* @SerializedName("results")
     private List<Results> results;
 
     public List<Results> getResults() {
@@ -84,5 +102,5 @@ public class People implements Parcelable {
         public People[] newArray(int size) {
             return new People[size];
         }
-    };
-}
+    };*/
+
