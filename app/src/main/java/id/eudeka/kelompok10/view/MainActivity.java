@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements PeopleNavigator {
     }
 
     private void initAdapter() {
-        adapter = new RecyclerViewAdapter(listAll);
+        adapter = new RecyclerViewAdapter(listAll, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this,   DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(adapter);

@@ -1,5 +1,7 @@
 package id.eudeka.kelompok10.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,13 +16,17 @@ import java.util.List;
 
 import id.eudeka.kelompok10.R;
 import id.eudeka.kelompok10.model.PeopleDetail;
+import id.eudeka.kelompok10.view.DetailActivity;
+import id.eudeka.kelompok10.view.MainActivity;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private List<PeopleDetail> list;
+    private Context context;
 
-    public RecyclerViewAdapter(List<PeopleDetail> list) {
+    public RecyclerViewAdapter(List<PeopleDetail> list, Context context) {
         this.list = list;
+        this.context = context;
     }
 
     @NonNull
@@ -34,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
-        PeopleDetail data = list.get(i);
+        final PeopleDetail data = list.get(i);
         viewHolder.name.setText("Name : "+data.getName());
         viewHolder.height.setText("Height : "+data.getHeight());
         viewHolder.mass.setText("Mass : "+data.getMass());
@@ -44,6 +50,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .placeholder(R.drawable.avatar)
                 .fit().centerCrop()
                 .into(viewHolder.imageView);
+
+
+        viewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("name", "Name : "+data.getName());
+                intent.putExtra("height", "Height : "+data.getHeight());
+                intent.putExtra("mass", "Mass : "+data.getMass());
+                intent.putExtra("hair_color", "Hair Color : "+data.getHairColor());
+                intent.putExtra("people_skin", "Skin Color: "+data.getSkinColor());
+                intent.putExtra("people_eye", "Eye Color: "+data.getEyeColor());
+                intent.putExtra("birth_year", "Birth Year : "+data.getBirthYear());
+                intent.putExtra("gender", "Gender: "+data.getGender());
+                intent.putExtra("homeworld", "HomeWorld: "+data.getHomeworld());
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
