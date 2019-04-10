@@ -6,6 +6,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements PeopleNavigator {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerView);
+
         peopleViewModel = new PeopleViewModel(Injection.provideTeamRepository(this), this);
         listAll = new ArrayList<>();
         peopleViewModel.setNavigator(this);

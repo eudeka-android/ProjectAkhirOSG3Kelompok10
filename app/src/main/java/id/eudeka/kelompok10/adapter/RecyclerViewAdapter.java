@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -37,6 +38,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.name.setText("Name : "+data.getName());
         viewHolder.height.setText("Height : "+data.getHeight());
         viewHolder.mass.setText("Mass : "+data.getMass());
+
+        Picasso.get()
+                .load("google.com")
+                .placeholder(R.drawable.avatar)
+                .fit().centerCrop()
+                .into(viewHolder.imageView);
     }
 
     @Override
@@ -47,12 +54,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView name, height, mass;
+        ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.name);
             height = itemView.findViewById(R.id.height);
             mass = itemView.findViewById(R.id.mass);
+            imageView = itemView.findViewById(R.id.img_item_photo);
 
         }
     }
