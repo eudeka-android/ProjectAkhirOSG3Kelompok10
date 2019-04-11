@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">MovieApps</string>
+    <string name="app_name">Star Wars</string>
+
+    <array name="hero">
+        <item>https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Luke_Skywalker.png/220px-Luke_Skywalker.png</item>
+        <item>https://images-na.ssl-images-amazon.com/images/I/514JwIS5f1L.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Star_Wars_and_the_Power_of_Costume_July_2018_19_%28R2-D2_costume_from_Episode_IV%29.jpg/220px-Star_Wars_and_the_Power_of_Costume_July_2018_19_%28R2-D2_costume_from_Episode_IV%29.jpg</item>
+        <item>https://images-na.ssl-images-amazon.com/images/I/91XyD3SUP%2BL._SX466_.jpg</item>
+        <item>https://vignette.wikia.nocookie.net/starwars/images/f/fc/Leia_Organa_TLJ.png/revision/latest?cb=20171224004147</item>
+        <item>https://vignette.wikia.nocookie.net/starwars/images/8/81/Owen-OP.jpg/revision/latest?cb=20070626181249</item>
+        <item>https://vignette.wikia.nocookie.net/starwars/images/c/cc/BeruCardTrader.png/revision/latest?cb=20170713063118</item>
+        <item>https://images-na.ssl-images-amazon.com/images/I/51KzLOAeZyL._SX425_.jpg</item>
+        <item>https://vignette.wikia.nocookie.net/swfanon/images/5/57/BiggsDarklighter.jpg/revision/latest?cb=20120324222406</item>
+        <item>https://nerdist.com/wp-content/uploads/2017/12/download.jpg</item>
+    </array>
+
 </resources>
